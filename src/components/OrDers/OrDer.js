@@ -4,6 +4,7 @@ import useProduct from '../../hooks/useProduct';
 import { removeFromDb } from '../../utilities/fakedb';
 import Cart from '../Cart/Cart';
 import ReviewItem from '../ReviewItem/ReviewItem';
+import './orders.css'
 
 const OrDer = () => {
 
@@ -30,15 +31,14 @@ const OrDer = () => {
                             key={product.id}
                             hundleRemoveProduct={hundleRemoveProduct}
 
-                        >
-
-
-                        </ReviewItem>)
+                        ></ReviewItem>)
                     }
 
                 </div>
                 <div className="cart-container">
-                    <Cart cart={cart}></Cart>
+                    <Cart cart={cart}>
+                        <button>button</button>
+                    </Cart>
                 </div>
             </div>
         </div>
